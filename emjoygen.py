@@ -1,13 +1,17 @@
 text= input('>')
-words= text.split(' ')
-emojy= {
-    ":)":"😃",
-    ":(":"😢",
-    ":x":"😵",
-    "rich":"💸"
-}
-output=""
-for word in words:
-    output+=emojy.get(word,word)+" "
 
-print(output)
+def emojify(sentence):
+    words=sentence.split(' ')
+    emojies={
+        ":)":"😃",
+        ":(":"😢",
+        ":x":"😵",
+        "rich":"💸"
+    }
+    output=""
+    for word in words:
+        output+=emojies.get(word,word)+" "
+    return output
+
+
+print(emojify(text))
